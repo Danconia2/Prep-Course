@@ -7,11 +7,8 @@ function obtenerMayor(x, y) {
 	// Tu código:
 	if (x > y) {
 		return x;
-	} else if (y > x) {
-		return y;
-	} else if (x === y) {
-		return x || y;
-	}
+	} 
+	return y;
 }
 
 function mayoriaDeEdad(edad) {
@@ -20,7 +17,7 @@ function mayoriaDeEdad(edad) {
 	//Si es menor, devolver --> "Not allowed"
 	if (edad >= 18) {
 		return "Allowed";
-	} else if (edad < 18) {
+	} else {
 		return "Not allowed";
 	}
 }
@@ -35,8 +32,9 @@ function conection(status) {
 		return "Online";
 	} else if (status === 2) {
 		return "Away";
+	} else {
+		return "Offline";
 	}
-	return "Offline";
 }
 
 function saludo(idioma) {
@@ -52,8 +50,10 @@ function saludo(idioma) {
 		return "Ni Hao!";
 	} else if (idioma === "ingles") {
 		return "Hello!";
+	} else {
+		return "Hola!";
 	}
-	return "Hola!";
+	
 }
 
 function colors(color) {
@@ -129,7 +129,7 @@ function fizzBuzz(numero) {
 		return "fizz";
 	} else if (numero % 5 === 0) {
 		return "buzz";
-	} else if (numero % 3 === 0 && numero % 5 === 0) {
+	} else if (numero % 15 === 0) {
 		return "fizzbuzz";
 	}
 	return numero;
@@ -163,10 +163,11 @@ function esPrimo(numero) {
 	// Nota: Los números 0 y 1 NO son considerados números primos
 	for (let i = 1; i < numero; i++) {
 		if (numero % i === 0) {
-			return true
+			return false
 		}
-		return false;
+		
 	}
+	return true;
 }
 
 function esVerdadero(valor){ 
@@ -208,7 +209,8 @@ function doWhile(numero) {
 	//Usar el bucle do ... while.
 	let i = 0;
 	do {
-		numero++
+		i += 1;
+		numero += 5;
 	} while (i < 8);
 	return numero;
 }
