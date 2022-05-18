@@ -115,9 +115,8 @@ function esEntero(numero) {
 	// Pista: Puedes resolver esto usando `Math.floor`
 	// Tu código:
 	if (Math.floor(numero)) {
-		return true;
+		
 	}
-	return false;
 }
 
 function fizzBuzz(numero) {
@@ -147,7 +146,7 @@ function operadoresLogicos(num1, num2, num3) {
 	} else if (num1 < 0 || num2 < 0 || num3 < 0) {
 		return "Hay negativos";
 	} else if (num1 > num2 + num3 && num1 > 0) {
-		return "Numero 1 es mayor y positivo";
+		return "Número 1 es mayor y positivo";
 	} else if (num3 > num1 && num3 > num2) {
 		num3++;
 		return num3; 
@@ -163,11 +162,11 @@ function esPrimo(numero) {
 	// Nota: Los números 0 y 1 NO son considerados números primos
 	for (let i = 1; i < numero; i++) {
 		if (numero % i === 0) {
-			return false
+			return false;
 		}
-		
+		return true;
 	}
-	return true;
+	
 }
 
 function esVerdadero(valor){ 
@@ -175,9 +174,9 @@ function esVerdadero(valor){
 	//si su valor es true y “Soy falso” si su valor es false.
 	//Escribe tu código aquí
 	if (valor) {
-		return "Soy Verdadero"
+		return "Soy verdadero"
 	}
-	return "Soy Falso"
+	return "Soy falso"
 
 }
 
