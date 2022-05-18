@@ -114,9 +114,7 @@ function esEntero(numero) {
 	// De lo contrario, devuelve "false"
 	// Pista: Puedes resolver esto usando `Math.floor`
 	// Tu código:
-	if (Math.floor(numero)) {
-		
-	}
+	return Math.floor(numero);
 }
 
 function fizzBuzz(numero) {
@@ -124,14 +122,10 @@ function fizzBuzz(numero) {
 	// Si "numero" es divisible entre 5, devuelve "buzz"
 	// Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
 	// De lo contrario, devuelve el numero
-	if (numero % 3 === 0) {
-		return "fizz";
-	} else if (numero % 5 === 0) {
-		return "buzz";
-	} else if (numero % 15 === 0) {
-		return "fizzbuzz";
-	}
-	return numero;
+	if(numero % 3 === 0) return 'fizz';
+	if(numero % 5 === 0) return 'buzz';
+	if(numero % 15 === 0) return 'fizzbuzz';
+  	return numero;
 }
 
 function operadoresLogicos(num1, num2, num3) {
@@ -160,13 +154,14 @@ function esPrimo(numero) {
 	// Pista: un número primo solo es divisible por sí mismo y por 1
 	// Pista 2: Puedes resolverlo usando un bucle `for`
 	// Nota: Los números 0 y 1 NO son considerados números primos
-	for (let i = 1; i < numero; i++) {
-		if (numero % i === 0) {
-			return false;
-		}
-		return true;
-	}
-	
+	if( numero < 2) return false;
+  	if(numero === 2) return true;
+  	for(var i = 2; i < numero; i++) {
+    	if(numero % i === 0) {
+      	return false;
+    	}
+  	}
+  	return true;
 }
 
 function esVerdadero(valor){ 
