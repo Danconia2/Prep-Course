@@ -120,14 +120,14 @@ function numeroMasGrande(numeros) {
 
 function multiplicarArgumentos() {
 	// Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
-  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
+	// Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
 	// Escribe tu código aquí:
 	var resultado = 1;
+	if (arguments.length < 1) {
+		return 0;
+	}
 	for (let i = 0; i < arguments.length; i++) {
 		resultado *= arguments[i];
-	}
-	if (arguments === false) {
-		return 0;
 	}
 	return resultado;
 }
@@ -153,9 +153,9 @@ function diaDeLaSemana(numeroDeDia) {
 	//Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
 	//si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
 	//Escribe tu código aquí   
-	if (numeroDeDia === 1 && numeroDeDia === 7) {
+	if (numeroDeDia === 1 || numeroDeDia === 7) {
 		return "Es fin de semana";
-	} else if (numeroDeDia > 1 && numeroDeDia < 7) {
+	} else if (numeroDeDia > 1 || numeroDeDia < 7) {
 		return "Es dia Laboral";
 	}
 } 
@@ -241,12 +241,11 @@ function breakStatement(numero) {
 		else {
 			arr.push(suma);
 		}
+		if (i < 10) {
+			return "Se interrumpió la ejecución";
+		}
 	}
-	if (i < 10) {
-		return "Se interrumpió la ejecución";
-	} else {
-		return arr;
-	}
+	return arr;
 }
 
 
