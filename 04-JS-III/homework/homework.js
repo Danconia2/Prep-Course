@@ -241,11 +241,11 @@ function breakStatement(numero) {
 		else {
 			arr.push(suma);
 		}
-		if (i < 10) {
-			return "Se interrumpió la ejecución";
-		} else {
-			return arr;
-		}
+	}
+	if (i < 10) {
+		return "Se interrumpió la ejecución";
+	} else {
+		return arr;
 	}
 }
 
