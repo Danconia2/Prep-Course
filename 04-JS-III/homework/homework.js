@@ -122,14 +122,12 @@ function multiplicarArgumentos() {
 	// Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
 	// Escribe tu código aquí:
-	if (arguments.length === 0) {
-		return 0;
-	} else if (arguments.length === 1) {
-		return arguments;
-	}
 	var resultado = 1;
 	for (let i = 0; i < arguments.length; i++) {
 		resultado *= arguments[i];
+	}
+	if (arguments === false) {
+		return 0;
 	}
 	return resultado;
 }
@@ -146,7 +144,7 @@ function cuentoElementos(arreglo){
 			mayorA18.push(numero)
 		}
 	}
-	return mayorA18;
+	return mayorA18.length;
 }
 
 
@@ -155,9 +153,9 @@ function diaDeLaSemana(numeroDeDia) {
 	//Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
 	//si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
 	//Escribe tu código aquí   
-	if (numeroDeDia > 0 && numeroDeDia < 3) {
+	if (numeroDeDia === 1 && numeroDeDia === 7) {
 		return "Es fin de semana";
-	} else if (numeroDeDia > 2 && numeroDeDia < 8) {
+	} else if (numeroDeDia > 1 && numeroDeDia < 7) {
 		return "Es dia Laboral";
 	}
 } 
@@ -236,13 +234,13 @@ function breakStatement(numero) {
 	//Pista: usá el statement 'break'
 	// Tu código:
 	var arr = [];
-	suma = 0;
+	var suma = numero;
 	for (let i = 0; i < 10; i++) {
-		suma = numero += 2;
-		if (suma === i) {
-			break;
+		suma += 2;
+		if (suma === i) break 
+		else {
+			arr.push(suma);
 		}
-		arr.push(suma);
 	}
 	if (i < 10) {
 		return "Se interrumpió la ejecución";
@@ -260,20 +258,15 @@ function continueStatement(numero) {
 	//Pista: usá el statement 'continue'
 	// Tu código:
 	var arr = [];
-	suma = 0;
+	var suma = numero;
 	for (let i = 0; i < 10; i++) {
-		suma = numero += 2;
-		if (i === 5) {
-			continue;
-		}
-		arr.push(suma);
+		if (i === 5) continue;
+		else {
+			suma += 2;
+			arr.push(suma);
+		}		
 	}
-	if (i < 10) {
-		return "Se interrumpió la ejecución";
-	} else {
-		return arr;
-	}
-
+	return arr;
 }
 
 
