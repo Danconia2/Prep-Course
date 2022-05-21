@@ -23,9 +23,8 @@ function agregarPropiedad (objeto, property) {
 	// Tu código:
 	objeto = {
 		property: null,
-	}
-	return objeto.property;
-	
+	};
+	return objeto;
 }
 
 function invocarMetodo (objeto, metodo) {
