@@ -37,11 +37,10 @@ function multiplicarNumeroDesconocidoPorCinco (objetoMisterioso) {
 	// "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
 	// Multiplica el numeroMisterioso por 5 y devuelve el producto
 	// Tu código:
-	obj = {
+	var obj = {
 		numeroMisterioso: objetoMisterioso,
-	}
-	obj.numeroMisterioso *= 5;
-	return obj.numeroMisterioso;
+	  }
+	return obj.numeroMisterioso * 5;
 }
 
 function eliminarPropiedad (objeto, unaPropiedad) {
