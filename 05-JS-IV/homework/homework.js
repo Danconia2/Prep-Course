@@ -55,8 +55,8 @@ function nuevoUsuario (nombre, email, password) {
 	// Tu código:
 	var obj = {
 		nombre: nombre,
-		correo: email,
-		contraseña: password
+		email: email,
+		password: password
 	}
 	return obj;
 }
