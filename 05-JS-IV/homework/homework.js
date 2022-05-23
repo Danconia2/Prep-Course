@@ -65,7 +65,7 @@ function tieneEmail (usuario) {
 	// Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
 	// De lo contrario, devuelve "false"
 	// Tu código:
-	if (usuario.hasOwnProperty([email]) === true) {
+	if (usuario[email]) {
 		return true;
 	}
 	return false;
@@ -76,6 +76,10 @@ function tienePropiedad (objeto, propiedad) {
 	// "propiedad" es un string
 	// De lo contrario, devuelve "false"
 	// Tu código:
+	if (objeto[propiedad]) {
+		return true;
+	}
+	return false;
 }
 
 function verificarPassword (usuario, password) {
