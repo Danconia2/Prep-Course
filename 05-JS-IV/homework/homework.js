@@ -97,7 +97,7 @@ function actualizarPassword (usuario, nuevaPassword) {
 	// Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevagPassword"
 	// Devuelve el objeto
 	// Tu código:
-	usuario = usuario[nuevaPassword]
+	usuario[password] = usuario[nuevaPassword]
 	return usuario;
 }
 
