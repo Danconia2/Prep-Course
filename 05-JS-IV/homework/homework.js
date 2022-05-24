@@ -117,7 +117,7 @@ function pasarUsuarioAPremium (usuarios) {
 	// Devuelve el array de usuarios
 	// Tu código:
 	for (let i = 0; i < usuarios.length; i++) {
-		usuarios[i].esPremium === true;
+		usuarios[i].esPremium = true;
 	}
 	return usuarios;
 }
@@ -147,7 +147,7 @@ function agregarMetodoCalculoDescuento (producto) {
 	// producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
 	// Tu código:
 	producto.calcularPrecioDescuento = function() {
-		return producto.precio - (producto.precio * porcentajeDeDescuento);
+		return producto.precio - (producto.precio * producto.porcentajeDeDescuento);
 	}
 	return producto;
 
