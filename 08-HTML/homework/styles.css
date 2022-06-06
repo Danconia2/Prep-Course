@@ -1,0 +1,33 @@
+body {
+    background-image: url(https://img.freepik.com/vector-gratis/ingredientes-pizza-costuras_1176-269.jpg?size=338&ext=jpg&ga=GA1.2.1318533667.1654541027);
+    display: flex;
+    flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+
+h1, h3, h4, span, p {
+    color: white;
+}
+
+a {
+    color: yellow;
+}
+
+img {
+    width: 400px;
+}
+
+.thirdDiv {
+    height: 600px;
+    width: 500px;
+    background-color: white;
+    padding: 50px;
+    border: 10px black;
+}
+
+#spanId {
+    font-size: 18px;
+    margin: 50px;
+}
