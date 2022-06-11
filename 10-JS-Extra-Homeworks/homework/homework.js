@@ -20,12 +20,9 @@ function numberOfCharacters(string) {
 	//Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
 	//Escribe tu código aquí
 	var newObj = {};
-	for(var i = 0; i < string.length; i++) {
-		if(newObj[string[i]] === undefined) {
-			newObj[string[i]] = 1;
-		} else {
-			newObj[string[i]]++
-		}
+	for (let i = 0; i < string.length; i++) {
+		const itera = string[i];
+		newObj[itera] === undefined ? newObj[itera] = 1 : newObj[itera]++;
 	}
 	return newObj;
 }
@@ -42,11 +39,7 @@ function capToFront(s) {
 	var may = [];
 	for (let i = 0; i < split.length; i++) {
 		const itera = split[i];
-		if (regex.test(itera)) {
-			may.push(itera);
-		} else {
-			min.push(itera);
-		}
+		regex.test(itera) ? may.push(itera) : min.push(itera);
 	}
 	return may.join("") + min.join("");
 }
