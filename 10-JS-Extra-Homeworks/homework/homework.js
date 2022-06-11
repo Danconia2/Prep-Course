@@ -58,6 +58,13 @@ function asAmirror(str) {
 	//pero con cada una de sus palabras invertidas, como si fuera un espejo.
 	//Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
 	//Escribe tu código aquí
+	var split = str.split(" ").reverse().join(" ");
+    var newArr = [];
+    for (let i = 0; i < split.length; i++) {
+        const itera = split[i];
+        newArr.unshift(itera);
+    }
+    return newArr.join("");
 } 
 
 
@@ -66,6 +73,7 @@ function capicua(numero){
 	//La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
 	//izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
 	//Escribe tu código aquí
+	return numero === Number(numero.toString().split("").reverse().join("")) ? "Es capicua" : "No es capicua"
 }
 
 
@@ -73,6 +81,16 @@ function deleteAbc(cadena){
 	//Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
 	//y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
 	//Escribe tu código aquí
+	var split = cadena.split("");
+	var newArr = [];
+	var regex = /[a-c]/i
+	for (let i = 0; i < split.length; i++) {
+		const itera = split[i];
+		if (regex.test(itera) !== true) {
+			newArr.push(itera);
+		}
+	}
+	return newArr.join("");
 }
 
 
