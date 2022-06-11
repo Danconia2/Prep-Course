@@ -36,6 +36,19 @@ function capToFront(s) {
 	//al principio de la palabra.
 	//Ejemplo: soyHENRY -> HENRYsoy
 	//Escribe tu código aquí
+	var split = s.split("");
+	var regex = /[A-Z]/
+	var min = [];
+	var may = [];
+	for (let i = 0; i < split.length; i++) {
+		const itera = split[i];
+		if (regex.test(itera) === true) {
+			may.push(itera);
+		} else {
+			min.push(itera);
+		}
+	}
+	return may.join("") + min.join("");
 }
 
 
