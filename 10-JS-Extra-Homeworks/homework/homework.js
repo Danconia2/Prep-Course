@@ -42,7 +42,7 @@ function capToFront(s) {
 	var may = [];
 	for (let i = 0; i < split.length; i++) {
 		const itera = split[i];
-		if (regex.test(itera) === true) {
+		if (regex.test(itera)) {
 			may.push(itera);
 		} else {
 			min.push(itera);
